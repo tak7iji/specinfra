@@ -16,6 +16,10 @@ module SpecInfra
       def from(base)
         @lines << "FROM #{base}"
       end
+      
+      def copy_file(from, to)
+        @lines << "ADD #{from} #{to}"
+      end
     end
   end
 end
